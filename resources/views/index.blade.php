@@ -29,8 +29,8 @@
                 <td>{{ $train->company }}</td>
                 <td>{{ $train->departure_station }}</td>
                 <td>{{ $train->arrival_station }}</td>
-                <td>{{ $train->departure_time }}</td>
-                <td>{{ $train->arrival_time }}</td>
+                <td>{{ \Illuminate\Support\Carbon::parse($train->departure_time)->format('d-m-Y H:i:s') }}</td>
+                <td>{{ \Illuminate\Support\Carbon::parse($train->arrival_time)->format('d-m-Y H:i:s') }}</td>
                 <td>{{ $train->train_code }}</td>
                 <td>{{ $train->carriages_number }}</td>
                 <td>{{ $train->on_time ? 'Sì' : 'No' }}</td>
